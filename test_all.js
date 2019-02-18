@@ -1,3 +1,5 @@
+'use strict'
+
 // Test framework
 
 function describe (description, test) {
@@ -50,8 +52,8 @@ NoteList.prototype.returnNotes = function() {
 
 // Tests
 
-note = new Note('This is the first test note')
-notes = new NoteList()
+var note = new Note('This is the first test note')
+var notes = new NoteList()
 
 describe('note', () => {
   it('shows text when read', () => {
