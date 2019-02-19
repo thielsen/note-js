@@ -11,23 +11,23 @@ function matcher (toCompare) {
   return {
     toBe: function (assertion) {
       if (toCompare === assertion) {
-        console.log('%cPASS', "color: green")
+        console.log('%c    PASS', "color: green")
       } else {
-        console.error('FAIL')
+        console.error('    FAIL')
       }
     },
     isA: function (assertion) {
       if (toCompare instanceof assertion) {
-        console.log('%cPASS', "color: green")
+        console.log('%c    PASS', "color: green")
       } else {
-        console.error('FAIL')
+        console.error('    FAIL')
       }
     },
     contains: function (assertion) {
       if (toCompare.indexOf(assertion) !== -1) {
-        console.log('%cPASS', "color: green")
+        console.log('%c    PASS', "color: green")
       } else {
-        console.error('FAIL')
+        console.error('    FAIL')
       }
     } 
   }
