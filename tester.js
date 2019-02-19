@@ -11,26 +11,23 @@ function matcher (e) {
   return {
     toBe: function (assertion) {
       if (e === assertion) {
-        console.log('%c.', "color: green")
+        console.log('%cPASS', "color: green")
       } else {
-        console.error('F')
+        console.error('FAIL')
       }
     },
     isA: function (assertion) {
       if (e instanceof assertion) {
-        console.log('%c.', "color: green")
+        console.log('%cPASS', "color: green")
       } else {
-        console.error('F')
+        console.error('FAIL')
       }
     },
     contains: function (assertion) {
-      console.log(e.indexOf(assertion))
-      console.log(e)
-      console.log(assertion)
       if (e.indexOf(assertion) !== -1) {
-        console.log('%c.', "color: green")
+        console.log('%cPASS', "color: green")
       } else {
-        console.error('F')
+        console.error('FAIL')
       }
     } 
   }
