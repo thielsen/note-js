@@ -1,27 +1,31 @@
-const describe = (description, test) => {
+function describe (description, test) {
   console.log(description)
   test()
 }
 
-const it = (message, func) => describe('  ' + message, func)
+function it (message, func) {
+  describe('  ' + message, func)
+}
 
-const matcher = (e) => ({
-  toBe: (asssertion) => {
-    if (e === assertion) {
-      console.log('.')
-      return true
-    } else {
-      console.log('F')
-      return false
+function matcher (e) {
+  return {
+    toBe: function (assertion) {
+      if (e === assertion) {
+        console.log('.')
+      } else {
+        console.error('F')
+      }
+    },
+    isA: function (assertion) {
+      if (typeof e === typeof assertion) {
+        console.log('.')
+      } else {
+        console.error('F')
+      }
     }
   }
-})
+}
 
-const expect = (e) => matcher(e)
-
-module.exports = {
-  describe,
-  expect,
-  it,
-  matcher
+function expect (e) {
+  return matcher(e)
 }

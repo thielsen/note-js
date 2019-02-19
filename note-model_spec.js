@@ -1,11 +1,8 @@
-var test = require('./tester.js');
-var note = require('./note-model.js');
+var testNote = new Note('This is the first test note')
 
-var testnote = new note.Note()
-
-test.describe('note', () => {
-  test.it('shows text when read', () => {
-    const output = note.read()
+describe('note', () => {
+  it('shows text when read', () => {
+    var output = testNote.read()
     expect(output).toBe('This is the first test note')
   })
 })
