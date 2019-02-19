@@ -1,5 +1,5 @@
 function describe (description, test) {
-  console.log(description)
+  console.log(`%c${description}`, "color: blue")
   test()
 }
 
