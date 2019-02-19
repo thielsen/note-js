@@ -7,24 +7,24 @@ function it (message, func) {
   describe('  ' + message, func)
 }
 
-function matcher (e) {
+function matcher (toCompare) {
   return {
     toBe: function (assertion) {
-      if (e === assertion) {
+      if (toCompare === assertion) {
         console.log('%cPASS', "color: green")
       } else {
         console.error('FAIL')
       }
     },
     isA: function (assertion) {
-      if (e instanceof assertion) {
+      if (toCompare instanceof assertion) {
         console.log('%cPASS', "color: green")
       } else {
         console.error('FAIL')
       }
     },
     contains: function (assertion) {
-      if (e.indexOf(assertion) !== -1) {
+      if (toCompare.indexOf(assertion) !== -1) {
         console.log('%cPASS', "color: green")
       } else {
         console.error('FAIL')
@@ -33,6 +33,7 @@ function matcher (e) {
   }
 }
 
-function expect (e) {
-  return matcher(e)
+function expect (toCompare) {
+  return matcher(toCompare)
 }
+

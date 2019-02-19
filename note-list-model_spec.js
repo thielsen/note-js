@@ -1,4 +1,3 @@
-var testNote = Note('This is the first test note')
 var testNoteList = new NoteList()
 
 describe('noteList', () => {
