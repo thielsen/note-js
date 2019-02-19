@@ -13,16 +13,17 @@ var multiTestNoteListHTML = new NoteListHTML(multiTestNoteList)
 describe('noteListHTML', () => {
   it('outputs an empty string when no notes present', () => {
     var output = emptyTestNoteListHTML.returnHTML()
-    expect(output).toBe('')
+    console.log(output)
+    expect(output).toBe("<ul></ul>")
   })
   it('outputs html string when one note is present', () => {
     var output = oneTestNoteListHTML.returnHTML()
     console.log(output)
-    expect(output).toBe('')
+    expect(output).toBe('<ul><li><div>Favourite food: pesto</div></li></ul>')
   })
   it('outputs html string when multiple notes are present', () => {
     var output = multiTestNoteListHTML.returnHTML()
     console.log(output)
-    expect(output).toBe('')
+    expect(output).toBe('<ul><li><div>Favourite food: pesto</div></li><li><div>Favourite dog: big</div></li></ul>')
   })
 })

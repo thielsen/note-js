@@ -11,14 +11,14 @@ function matcher (e) {
   return {
     toBe: function (assertion) {
       if (e === assertion) {
-        console.log('.')
+        console.log('%c.', "color: green")
       } else {
         console.error('F')
       }
     },
     isA: function (assertion) {
       if (typeof e === typeof assertion) {
-        console.log('.')
+        console.log('%c.', "color: green")
       } else {
         console.error('F')
       }
