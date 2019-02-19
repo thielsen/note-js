@@ -3,6 +3,6 @@ var singleNoteView = new SingleNoteView(note)
 
 describe('singleNoteView', () => {
   it('shows the note on the page', () => {
-    expect(singleNoteView.viewNote()).toBe('Favourite thing: Cat')
+    expect(singleNoteView.viewNote()).toBe('<div>Favourite thing: Cat</div>')
   })
 })

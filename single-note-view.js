@@ -4,7 +4,7 @@
   }
 
   SingleNoteView.prototype.viewNote = function() {
-    return this.note.text
+    return `<div>${this.note.text}</div>`
   }
 
   exports.SingleNoteView = SingleNoteView
