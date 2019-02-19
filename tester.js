@@ -17,12 +17,22 @@ function matcher (e) {
       }
     },
     isA: function (assertion) {
-      if (typeof e === typeof assertion) {
+      if (e instanceof assertion) {
         console.log('%c.', "color: green")
       } else {
         console.error('F')
       }
-    }
+    },
+    contains: function (assertion) {
+      console.log(e.indexOf(assertion))
+      console.log(e)
+      console.log(assertion)
+      if (e.indexOf(assertion) !== -1) {
+        console.log('%c.', "color: green")
+      } else {
+        console.error('F')
+      }
+    } 
   }
 }
 
