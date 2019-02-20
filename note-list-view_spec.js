@@ -21,14 +21,14 @@ describe('noteListView', () => {
   })
   it('outputs html string when one note is present', () => {
     var output = oneTestNoteListView.returnHTML()
-    expect(output).toBe('<ul><li><div>Favourite ham: ham</div></li></ul>')
+    expect(output).toBe('<ul><li><div><a href="#notes/0">Favourite ham: ham</a></div></li></ul>')
   })
   it('outputs html string when multiple notes are present', () => {
     var output = multiTestNoteListView.returnHTML()
-    expect(output).toBe('<ul><li><div>Favourite cat: cat</div></li><li><div>Favourite dog: big</div></li></ul>')
+    expect(output).toBe('<ul><li><div><a href="#notes/0">Favourite cat: cat</a></div></li><li><div><a href="#notes/1">Favourite dog: big</a></div></li></ul>')
   })
   it('only outputs first 20 characters', () => {
     var output = char30NoteListView.returnHTML()
-    expect(output).toBe('<ul><li><div>1234567890abcdefghij</div></li></ul>')
+    expect(output).toBe('<ul><li><div><a href="#notes/0">1234567890abcdefghij</a></div></li></ul>')
   })
 })
