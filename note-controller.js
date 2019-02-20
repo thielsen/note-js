@@ -33,7 +33,8 @@
   NoteController.prototype.preventFormSubmit = function() {
     document.getElementById("text").addEventListener("submit", (event) => {
       event.preventDefault()
-      console.log(event)
+      this.noteList.add(event.target[0].value);
+      this.updateHTML();
     })
   };
 
