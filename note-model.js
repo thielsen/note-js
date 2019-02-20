@@ -8,7 +8,7 @@
     return this.text
   }
 
-  Note.prototype.check_id = function() {
+  Note.prototype.checkId = function() {
     return this.id
   }
 

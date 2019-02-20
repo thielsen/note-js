@@ -6,7 +6,7 @@ describe('note', () => {
     expect(output).toBe('This is the first test note')
   })
   it('has a note identifier of 0', () => {
-    var output = testNote.check_id()
+    var output = testNote.checkId()
     expect(output).toBe(0)
   })
 })

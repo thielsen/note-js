@@ -5,7 +5,7 @@
 
   NoteListView.prototype.returnHTML = function() {
     list = this.noteList.returnNotes().map(
-      note => `<li><div>${note.read().slice(0, 20)}</div></li>`
+      note => `<li><div><a href="#notes/${note.checkId()}">${note.read().slice(0, 20)}</a></div></li>`
     ).join('')
     return `<ul>${list}</ul>`
   }
