@@ -9,6 +9,27 @@
     document.getElementById('app').innerHTML = html
   }
 
+  NoteController.prototype.changeContent = function() {
+    var currentNote = this.showNote.bind(this)
+    window.addEventListener("hashchange", currentNote)
+  }
+
+  NoteController.prototype.showNote = function() {
+    this.displayNote(this.findNote(window.location.hash.split("#notes/")[1]))
+  }
+
+  NoteController.prototype.displayNote = function(note) {
+    var singleNoteView = new SingleNoteView(note)
+    var div = document.getElementById('app')
+    div.innerHTML = singleNoteView.viewNote()
+  }
+
+  NoteController.prototype.findNote = function(id) {
+    return this.noteList.returnNotes().find(function(note) {
+      return String(note.id) === id
+    })
+  }
+
   exports.NoteController = NoteController
 })(this)
 

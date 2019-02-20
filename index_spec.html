@@ -13,14 +13,11 @@
       <script src="note-list-view.js"></script>
       <script src="note-controller.js"></script>
       <script src="single-note-view.js"></script>
-      <script>
-          var noteList = new NoteList()
-          noteList.add('This is test note one')
-          noteList.add('This is another test note to confirm the UI looks good')
-          noteList.add('this is the final test note')
-          var noteController = new NoteController(noteList);
-          noteController.updateHTML();
-          noteController.changeContent();
-      </script>
+      <script src="tester.js"></script>
+      <script src="note-model_spec.js"></script>
+      <script src="note-list-model_spec.js"></script>
+      <script src="note-list-view_spec.js"></script>
+      <script src="note-controller_spec.js"></script>
+      <script src="single-note-view_spec.js"></script>
   </body>
 </html>
