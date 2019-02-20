@@ -1,4 +1,4 @@
-var testNote = new Note('This is the first test note')
+var testNote = new Note('This is the first test note', 0)
 
 describe('note', () => {
   it('shows text when read', () => {

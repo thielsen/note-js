@@ -1,7 +1,7 @@
 (function(exports) {
-  function Note(text) {
+  function Note(text, id) {
     this.text = text
-    this.id = 0
+    this.id = id
   }
 
   Note.prototype.read = function() {
